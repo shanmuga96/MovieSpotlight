@@ -27,18 +27,63 @@ public class Movie {
     @Column
     private BigInteger boxOfficeCollectionUsd;
 
-   @Column
-   private String rated;
+    @Column
+    private String rated;
 
     @Column
     private String released;
 
     @Column
-    private String genre;
-
-    @Column
     private String runtime;
 
     @Column
+    private String genre;
+
+    @Column
     private String director;
+
+    @Column
+    private String writer;
+
+    @Column
+    private String actors;
+
+    @Column
+    private String plot;
+
+    @Column
+    private String language;
+
+    @Column
+    private String country;
+
+    @Column
+    private String awards;
+
+    @Column
+    private String poster;
+
+    @Column
+    private String metaScore;
+
+    @Column
+    private String imdbRating;
+
+    @Column
+    private String imdbVotes;
+
+    @Column
+    private String imdbId;
+
+    @Column
+    private String type;
+
+    @Column
+    private String dvd;
+
+    @Column
+    private String production;
+
+    @Column
+    private String website;
 }
