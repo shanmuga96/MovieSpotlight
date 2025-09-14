@@ -24,7 +24,7 @@ public class Movie {
     @Column(nullable = false)
     private int releaseYear;
 
-    @Column(nullable = false, columnDefinition = "BIGINT UNSIGNED")
+    @Column
     private BigInteger boxOfficeCollectionUsd;
 
     @Column
