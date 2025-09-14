@@ -16,9 +16,16 @@ public class Rating {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private BigInteger id;
 
-    /** Many ratings can be given for the same movie by different users.
-     * (Or) One movie can have many ratings */
+    /** Many ratings can be given to the same movie by different users.
+     * (Or) One movie can have many different ratings */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movie_id") /** Indicates the Foreign Key */
     private Movie movie;
+
+    /** Numerical rating value given to the movie. Cannot be null. */
+    @Column(nullable = false)
+    private int rating;
+
+    /** Optional review comment given by user along with the rating */
+    private String comment;
 }
