@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, BigInteger> {
-    List<Movie> findMovieByTitleAndReleaseYear(final String title, final int releasedYear);
+    List<Movie> findMovieByTitleAndReleaseYear(final String title, final int releaseYear);
 
     Optional<Movie> findByTitle(String title);
 
