@@ -62,8 +62,9 @@ public class AcademyAwardsLoader implements CommandLineRunner {
      */
     private Nomination createNomination(String[] data) {
         try {
-            String yearInput = data[0].replaceAll("[^0-9]", ""); // keep only digits
-            int releaseYear = Integer.parseInt(yearInput);
+            String yearText = data[0].trim();             // "2010 (83rd)"
+            String yearOnly = yearText.substring(0, 4);  // "2010"
+            int releaseYear = Integer.parseInt(yearOnly);
 
             String nominee = data[2].trim();
             String additionalInfo = data[3].trim();

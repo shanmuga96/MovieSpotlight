@@ -8,6 +8,8 @@ import org.springframework.web.client.RestClient;
 
 import java.util.Map;
 
+/** Configuration for OMDB API RestClient. */
+
 @Slf4j
 @Configuration
 public class ApiClientConfig {
@@ -18,6 +20,7 @@ public class ApiClientConfig {
     @Value("${omdb.api.key}")
     private String apiKey;
 
+    /** @return - Returns an instance for communicating with the OMDB API. */
     @Bean(name = "omdbApiRestClient")
     public RestClient omdbApiRestClient(RestClient.Builder builder) {
         return builder.baseUrl(omdbApiUrl).defaultUriVariables(Map.of("apikey", apiKey)).build();
