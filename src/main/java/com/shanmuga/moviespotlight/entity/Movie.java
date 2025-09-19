@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 /** Represents a movie entity. */
 @Entity
@@ -86,4 +88,8 @@ public class Movie {
 
     @Column
     private String website;
+
+    /** A movie can have many ratings */
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Rating> ratings = new ArrayList<>();
 }
