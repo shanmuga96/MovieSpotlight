@@ -1,7 +1,7 @@
-Movies nominated for Best Picture are extracted from the CSV file
+# 🤔 Assumptions
 
-3 primary APIs are created.
-
-GET - Get movie details from the OMDB API based on search title
-POST - add user ratings to movies
-GET - Top 10 rated movies
+- CSV file contains accurate Best Picture winners (1927–2010)
+- Box office data is reliable
+- Users can rate movies multiple times; average rating is calculated
+- External movie API responds reliably
+- Focus on MVP functionality; no concurrency/load optimization yet
